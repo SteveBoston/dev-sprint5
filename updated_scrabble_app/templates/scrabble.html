@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+	<h2>Scrabble Tool</h2>
+
+	<p>This app helps you cheat at Scrabble. Enter the letters in your tray into the first box, and the length of the word you want to make into the second box. The app will compare your letters with a large list of words (a slightly modified version of <a href = "http://www.greenteapress.com/thinkpython/code/words.txt">this list</a>), and will return the words that you can make.
+
+	<form action="{{url_for('scrabble')}}" method="post">
+		<div><p>Enter your letters here:
+		<input type="text" name="wordlist" />
+		</p></div>
+		<div><p>Choose the length of the word you want to make:
+		<!-- <input type="number" name="wordlength" /></div> -->
+		 <select name="wordlength">
+			<option value=1>1</option>
+			<option value=2>2</option>
+			<option value=3>3</option>
+			<option value=4>4</option>
+			<option value=5>5</option>
+			<option value=6>6</option>
+			<option value=7>7</option>
+		<div><input type="submit" value="Find Words" /></div>
+	</form>
+
+{% endblock %}
+{% block nav %}
+<li><a href="{{url_for('main')}}">back</a></li>
+{% endblock %}
+

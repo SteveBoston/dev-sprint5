@@ -43,7 +43,7 @@ def all_possibilities(filename, scrabble_letters, min_num_letters, total_word_le
 if __name__ == '__main__':
     lmin = 5
     lmax = 9
-    scrabble_letters = 'catapult'
+    scrabble_letters = 'caawesf'
     scrabble_sig = signature(scrabble_letters)
     options_list = all_possibilities('words.txt', scrabble_sig, lmin, lmax)
     print "You have the letters " + scrabble_letters + " in your tray."
